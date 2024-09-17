@@ -1,0 +1,46 @@
+################################################
+#   Project Name:The Ice Cream Project
+#   Author Name: Payathik Manoranjan
+#   Date: Sept 15, 2024
+#   Description: identify the amount of ice cream they want to sell in a week.
+################################################
+#DECLARATIONS:
+KIDDIE_ML = 60
+SMALL_ML = 120
+MEDIUM_ML = 240
+LARGE_ML = 360
+#
+#   INPUT
+#   Display message: “Please enter the total number of kiddie cones sold in 7 days: $”
+try:
+    userinput = int(input("Please enter the total amount of kiddie cones sold:")) 
+    #   Display message: “Please enter the total number of small cones sold in 7 days: $”
+    userinput1 = int(input("Please enter the total amount of small cones sold:")) 
+    #   Display message: “Please enter the total number of medium cones sold in 7 days: $”
+    userinput2 = int(input("Please enter the total amount of medium cones sold:")) 
+    #   Display message: “Please enter the total number of large cones sold in 7 days: $”
+    userinput3 = int(input("Please enter the total amount of large cones sold:")) 
+except:
+    userinput = -1
+    userinput1 = -1
+    userinput2 = -1
+    userinput3 = -1
+#
+#   PROCESSING  
+if userinput < 0 or userinput1 < 0 or userinput2 < 0 or userinput3 < 0:
+    print("Your Input is Invalid")
+else: 
+    #   Convert amount of ice cream sold of kiddie cone to ml
+    kiddie_total = float(userinput * KIDDIE_ML)
+    #   Convert amount of ice cream sold of small cone to ml
+    small_total = float(userinput1 * SMALL_ML)
+    #   Convert amount of ice cream sold of medium cone to ml
+    medium_total = float(userinput2 * MEDIUM_ML)
+    #   Convert amount of ice cream sold of large cone to ml
+    large_total = float(userinput3 * LARGE_ML)
+    #   Store the user input in variable total_amount_of_ice_cream_sold
+    total_amount_of_ice_cream_sold = kiddie_total + small_total + medium_total + large_total
+#
+#   OUTPUT
+#Display total amount of ice cream sold within the 7 days
+    print("Total amount of Ice Creams Sold   :   " + str(total_amount_of_ice_cream_sold))
